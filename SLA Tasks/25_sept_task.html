@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+</head>
+<body>
+    <h1 id="status-message"></h1>
+    <script>
+        /* Write a program using setTimeout to print "Hello" after 2 seconds */
+
+        console.log("Hello");
+        setTimeout(() => {
+            console.log("run after 2 seconds");
+        },2000);
+
+        /* Create a counter using setInterval that prints number 1-10, then stops */
+
+        let count = 1;
+        let interval = setInterval(() => {
+            console.log( + count);
+            count++;
+            if(count > 10){
+                clearInterval(interval);
+            }
+        },2000)
+
+        /* Show "Loading...", then replace it with "Data Loaded" after 3 seconds */
+
+        const statusElement = document.getElementById('status-message');
+        statusElement.textContent = "Loading...";
+        setTimeout(() => {
+            statusElement.textContent = "Data Loaded";
+        }, 3000)
+
+    </script>
+</body>
+</html>
